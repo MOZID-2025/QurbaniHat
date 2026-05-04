@@ -9,7 +9,7 @@
     "age": 3,
     "location": "Bogura",
     "description": "Healthy deshi cow suitable for Qurbani. Naturally raised.",
-    "image": "https://www.wisbar.org/NewsPublications/InsideTrack/PublishingImages/Article%20Images/goat-curious-1200x630.jpg",
+    "image": "cow1.jpeg",
     "category": "Large Animal"
   },
   {
@@ -35,7 +35,7 @@
     "age": 3,
     "location": "Rajshahi",
     "description": "Well-fed black cow, perfect for sacrifice.",
-    "image": "/cow2.png",
+    "image": "/cow3.jpeg",
     "category": "Large Animal"
   },
   {

@@ -3,9 +3,8 @@ import React from "react";
 import FeaturedAnimalsCard from "./FeaturedAnimalsCard";
 
 const FeaturedAnimals = async () => {
-  // Fetch data with caching (better for performance)
   const res = await fetch("https://qurbani-hat-mocha.vercel.app/data.json", {
-    next: { revalidate: 60 }, // revalidate every 60 seconds
+    next: { revalidate: 60 },
   });
 
   const animalsData = await res.json();

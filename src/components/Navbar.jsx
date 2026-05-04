@@ -30,9 +30,9 @@ const Navbar = () => {
           </Link>
 
           <Link
-            href="/all-animals"
+            href="/AllAnimals"
             className={`${
-              pathName === "/all-animals"
+              pathName === "/AllAnimals"
                 ? "bg-green-800 text-white px-4 py-1.5 rounded-md flex items-center gap-2"
                 : ""
             }`}
@@ -41,12 +41,6 @@ const Navbar = () => {
               All Animals
             </button>
           </Link>
-
-          {/* <Link href="/stats">
-            <button className="flex items-center gap-1 cursor-pointer">
-                <image  />
-            </button>
-          </Link> */}
         </div>
       </div>
     </div>
