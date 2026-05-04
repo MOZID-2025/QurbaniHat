@@ -9,7 +9,7 @@
     "age": 3,
     "location": "Bogura",
     "description": "Healthy deshi cow suitable for Qurbani. Naturally raised.",
-    "image": "https://source.unsplash.com/800x600/?cow,cattle",
+    "image": "https://www.wisbar.org/NewsPublications/InsideTrack/PublishingImages/Article%20Images/goat-curious-1200x630.jpg",
     "category": "Large Animal"
   },
   {
@@ -22,7 +22,7 @@
     "age": 4,
     "location": "Chattogram",
     "description": "Strong and healthy red cow ideal for Qurbani.",
-    "image": "https://source.unsplash.com/800x600/?red-cow,cattle",
+    "image": "/cow2.png",
     "category": "Large Animal"
   },
   {
@@ -35,7 +35,7 @@
     "age": 3,
     "location": "Rajshahi",
     "description": "Well-fed black cow, perfect for sacrifice.",
-    "image": "https://source.unsplash.com/800x600/?black-cow,livestock",
+    "image": "/cow2.png",
     "category": "Large Animal"
   },
   {
@@ -48,7 +48,7 @@
     "age": 2,
     "location": "Dhaka",
     "description": "Healthy Black Bengal goat, best for Qurbani.",
-    "image": "https://source.unsplash.com/800x600/?goat,black-bengal",
+    "image": "/cow2.png",
     "category": "Small Animal"
   },
   {
@@ -61,7 +61,7 @@
     "age": 3,
     "location": "Sylhet",
     "description": "Strong mountain goat with good health.",
-    "image": "https://source.unsplash.com/800x600/?white-goat,mountain",
+    "image": "/cow2.png",
     "category": "Small Animal"
   },
   {
@@ -74,7 +74,7 @@
     "age": 2,
     "location": "Comilla",
     "description": "Healthy sheep raised in natural environment.",
-    "image": "https://source.unsplash.com/800x600/?sheep,lamb",
+    "image": "/cow2.png",
     "category": "Small Animal"
   },
   {
@@ -87,7 +87,7 @@
     "age": 5,
     "location": "Rangpur",
     "description": "Large and strong bull cow suitable for group Qurbani.",
-    "image": "https://source.unsplash.com/800x600/?bull,cow",
+    "image": "/cow2.png",
     "category": "Large Animal"
   },
   {
@@ -100,7 +100,7 @@
     "age": 1,
     "location": "Narayanganj",
     "description": "Small healthy goat, budget friendly.",
-    "image": "https://source.unsplash.com/800x600/?brown-goat,animal",
+    "image": "/cow2.png",
     "category": "Small Animal"
   },
   {
@@ -113,7 +113,7 @@
     "age": 3,
     "location": "Jessore",
     "description": "Clean white cow, well maintained and healthy.",
-    "image": "https://source.unsplash.com/800x600/?white-cow,farm",
+    "image": "/cow2.png",
     "category": "Large Animal"
   },
   {
@@ -126,7 +126,7 @@
     "age": 3,
     "location": "Khulna",
     "description": "Heavy meat goat, ideal for Qurbani.",
-    "image": "https://source.unsplash.com/800x600/?fat-goat,meat",
+    "image": "/cow2.png",
     "category": "Small Animal"
   },
   {
@@ -139,7 +139,7 @@
     "age": 2,
     "location": "Barishal",
     "description": "Naturally raised village sheep.",
-    "image": "https://source.unsplash.com/800x600/?sheep,village",
+    "image": "/cow2.png",
     "category": "Small Animal"
   },
   {
@@ -152,7 +152,7 @@
     "age": 4,
     "location": "Mymensingh",
     "description": "Premium quality cow, healthy and strong.",
-    "image": "https://source.unsplash.com/800x600/?cow,farm-animal",
+    "image": "/cow2.png",
     "category": "Large Animal"
   }
 ]
