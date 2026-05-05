@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 
 const FeaturedAnimalsCard = ({ animal }) => {
@@ -25,9 +26,11 @@ const FeaturedAnimalsCard = ({ animal }) => {
           <span className="font-bold text-green-600">৳{animal.price}</span>
         </div>
 
-        <button className="mt-4 w-full bg-green-600 hover:bg-green-700 text-white py-2 rounded-lg transition">
-          View Details
-        </button>
+        <Link href={`AllAnimals/${animal.id}`}>
+          <button className="mt-4 w-full bg-green-600 hover:bg-green-700 text-white py-2 rounded-lg transition">
+            View Details
+          </button>
+        </Link>
       </div>
     </div>
   );
