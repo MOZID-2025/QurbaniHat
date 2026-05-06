@@ -1,6 +1,5 @@
-import Image from "next/image";
 import React from "react";
-import FeaturedAnimalsCard from "./FeaturedAnimalsCard";
+import FeaturedAnimalsCard from "../../src/components/FeaturedAnimalsCard";
 
 const FeaturedAnimals = async () => {
   const res = await fetch("https://qurbani-hat-mocha.vercel.app/data.json", {
@@ -9,7 +8,6 @@ const FeaturedAnimals = async () => {
 
   const animalsData = await res.json();
 
-  // Get only first 4 featured animals
   const featuredAnimals = animalsData.slice(0, 4);
 
   return (

@@ -1,5 +1,4 @@
 import BookingForm from "@/components/BookingForm";
-import { Info } from "lucide-react";
 import Image from "next/image";
 import React from "react";
 import { IoMdInformationCircleOutline } from "react-icons/io";

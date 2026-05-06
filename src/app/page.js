@@ -1,5 +1,5 @@
-import HeroBanner from "@/components/Banner";
-import FeaturedAnimals from "@/components/FeaturedAnimals";
+import FeaturedAnimals from "../../src/components/FeaturedAnimals";
+import HeroBanner from "../../src/components/HeroBanner";
 
 export default function Home() {
   return (

@@ -1,5 +1,5 @@
 "use client";
-import FeaturedAnimalsCard from "@/components/FeaturedAnimalsCard";
+import FeaturedAnimalsCard from "../../components/FeaturedAnimalsCard";
 import React, { useState, useEffect } from "react";
 
 const AllAnimals = () => {
