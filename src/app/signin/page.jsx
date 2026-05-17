@@ -1,6 +1,8 @@
 "use client";
+
 import { authClient } from "../../../src/lib/auth-client";
 import { Check } from "@gravity-ui/icons";
+import { toast } from "react-toastify";
 import {
   Button,
   Card,
@@ -12,21 +14,33 @@ import {
   TextField,
 } from "@heroui/react";
 import { GrGoogle } from "react-icons/gr";
+import Link from "next/link";
+import { useRouter } from "next/navigation";
+import SocialLogin from "../../components/SocialLogin";
 
 export default function SignInPage() {
+  const router = useRouter();
+
   const onSubmit = async (e) => {
     e.preventDefault();
 
     const email = e.target.email.value;
     const password = e.target.password.value;
 
-    const { data, error } = await authClient.signIn.email({
+    const { error } = await authClient.signIn.email({
       email,
       password,
       callbackURL: "/",
     });
 
-    console.log({ data, error });
+    if (error) {
+      toast.error("Invalid email or password!");
+      return;
+    }
+
+    toast.success("Login successful!");
+
+    router.push("/");
   };
 
   const handleGoogleSignIn = async () => {
@@ -66,9 +80,11 @@ export default function SignInPage() {
             if (value.length < 8) {
               return "Password must be at least 8 characters";
             }
+
             if (!/[A-Z]/.test(value)) {
               return "Password must contain at least one uppercase letter";
             }
+
             if (!/[0-9]/.test(value)) {
               return "Password must contain at least one number";
             }
@@ -77,33 +93,31 @@ export default function SignInPage() {
           }}
         >
           <Label>Password</Label>
+
           <Input placeholder="Enter your password" />
+
           <Description>
             Must be at least 8 characters with 1 uppercase and 1 number
           </Description>
+
           <FieldError />
         </TextField>
 
         <div className="flex gap-2">
-          <Button type="submit">
+          <Button className="bg-green-700" type="submit ">
             <Check />
             Submit
           </Button>
-          <Button type="reset" variant="secondary">
-            Reset
-          </Button>
+
+          <Link href="/signup">
+            <Button className="bg-green-700">Register</Button>
+          </Link>
         </div>
       </Form>
 
-      <p className="text-center">Or</p>
+      <p className="text-center my-4">Or</p>
 
-      <Button
-        onClick={handleGoogleSignIn}
-        variant="outline"
-        className={"w-full"}
-      >
-        <GrGoogle /> Sign In With Google
-      </Button>
+      <SocialLogin />
     </Card>
   );
 }

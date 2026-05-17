@@ -6,16 +6,14 @@ const BookingForm = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    // এখানে auth check বসাতে পারো
-    // if (!user) return toast.error("Please login first");
-
-    e.target.reset();
     toast.success("Booking successful!");
+    e.target.reset();
   };
 
   return (
     <div className="bg-white rounded-3xl shadow-lg p-8">
       <h2 className="text-2xl font-bold mb-2">Book This Animal</h2>
+
       <p className="text-gray-500 mb-6">
         Fill the form to confirm your booking.
       </p>

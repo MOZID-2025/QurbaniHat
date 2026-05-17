@@ -7,6 +7,7 @@ const nextConfig = {
       {
         hostname: "source.unsplash.com",
         hostname: "www.wisbar.org",
+        hostname: "ibb.co.com",
       },
     ],
   },

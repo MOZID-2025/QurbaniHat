@@ -1,9 +1,22 @@
-import BookingForm from "@/components/BookingForm";
+import BookingForm from "../../../components/BookingForm";
 import Image from "next/image";
 import React from "react";
 import { IoMdInformationCircleOutline } from "react-icons/io";
+import { headers } from "next/headers";
+import { redirect } from "next/navigation";
+import { auth } from "../../../lib/auth";
 
 const AnimalDetails = async ({ params }) => {
+  // Get Session
+  const session = await auth.api.getSession({
+    headers: await headers(),
+  });
+
+  // If user not logged in
+  if (!session) {
+    redirect("/signin");
+  }
+
   const { id } = await params;
 
   const res = await fetch("https://qurbani-hat-mocha.vercel.app/data.json", {
@@ -13,6 +26,15 @@ const AnimalDetails = async ({ params }) => {
   const animalsData = await res.json();
 
   const animal = animalsData.find((a) => a.id == id);
+
+  // If animal not found
+  if (!animal) {
+    return (
+      <div className="text-center py-20 text-2xl font-bold">
+        Animal Not Found
+      </div>
+    );
+  }
 
   return (
     <div className="max-w-6xl mx-auto px-4 py-12">
@@ -30,6 +52,7 @@ const AnimalDetails = async ({ params }) => {
 
           <div className="p-6">
             <h1 className="text-3xl font-bold">{animal.name}</h1>
+
             <p className="text-gray-600 mt-2">{animal.description}</p>
 
             <div className="grid grid-cols-2 gap-4 mt-6 text-sm">
@@ -42,21 +65,25 @@ const AnimalDetails = async ({ params }) => {
                 <IoMdInformationCircleOutline />
                 {animal.breed}
               </h3>
+
               <h3 className="flex items-center gap-2 font-bold">
                 <IoMdInformationCircleOutline />
-                {`${animal.weight} KG`}
+                {animal.weight} KG
               </h3>
+
               <h3 className="flex items-center gap-2 font-bold">
                 <IoMdInformationCircleOutline />
-                {`${animal.age} Years`}
+                {animal.age} Years
               </h3>
+
               <h3 className="flex items-center gap-2 font-bold">
                 <IoMdInformationCircleOutline />
                 {animal.location}
               </h3>
+
               <h3 className="flex items-center gap-2 font-bold">
-                <IoMdInformationCircleOutline />
-                {`৳ ${animal.price.toLocaleString()}`}
+                <IoMdInformationCircleOutline />৳{" "}
+                {animal.price.toLocaleString()}
               </h3>
             </div>
           </div>

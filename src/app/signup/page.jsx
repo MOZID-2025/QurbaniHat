@@ -1,4 +1,5 @@
 "use client";
+import SocialLogin from "../../components/SocialLogin";
 import { authClient } from "../../lib/auth-client";
 import { Check } from "@gravity-ui/icons";
 import {
@@ -11,7 +12,9 @@ import {
   Label,
   TextField,
 } from "@heroui/react";
+import Link from "next/link";
 import { useRouter } from "next/navigation";
+import { toast } from "react-toastify";
 
 export default function SignUpPage() {
   const router = useRouter();
@@ -31,10 +34,9 @@ export default function SignUpPage() {
       image,
     });
 
-    console.log({ data, error });
-
     if (!error) {
-      router.push("/");
+      toast.success("Registration successful!");
+      router.push("/signin");
     }
   };
 
@@ -100,15 +102,17 @@ export default function SignUpPage() {
         </TextField>
 
         <div className="flex gap-2">
-          <Button type="submit">
+          <Button className="bg-green-700" type="submit">
             <Check />
             Submit
           </Button>
-          <Button type="reset" variant="secondary">
-            Reset
-          </Button>
+
+          <Link href={"/signin"}>
+            <Button className="bg-green-700">Login</Button>
+          </Link>
         </div>
       </Form>
+      <SocialLogin />
     </Card>
   );
 }
