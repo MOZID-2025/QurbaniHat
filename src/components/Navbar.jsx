@@ -58,8 +58,12 @@ const Navbar = () => {
               {/* Profile Image */}
               <div className="relative w-12 h-12">
                 <Image
-                  src={user?.image}
-                  alt={user.name || "User"}
+                  src={
+                    user?.image?.startsWith("http")
+                      ? user.image
+                      : "/default-user.png"
+                  }
+                  alt={user?.name || "User"}
                   fill
                   className="rounded-full object-cover border-2 border-green-800"
                 />

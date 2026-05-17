@@ -13,7 +13,6 @@ import {
   Label,
   TextField,
 } from "@heroui/react";
-import { GrGoogle } from "react-icons/gr";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import SocialLogin from "../../components/SocialLogin";
@@ -37,16 +36,8 @@ export default function SignInPage() {
       toast.error("Invalid email or password!");
       return;
     }
-
     toast.success("Login successful!");
-
     router.push("/");
-  };
-
-  const handleGoogleSignIn = async () => {
-    await authClient.signIn.social({
-      provider: "google",
-    });
   };
 
   return (
