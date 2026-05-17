@@ -3,10 +3,11 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import { usePathname } from "next/navigation";
-import { ChartNoAxesCombined, History, House } from "lucide-react";
 
 const Navbar = () => {
   const pathName = usePathname();
+
+  const user = null;
 
   return (
     <div className="bg-white">
@@ -41,6 +42,29 @@ const Navbar = () => {
               All Animals
             </button>
           </Link>
+
+          {user ? (
+            <>
+              <span className="font-semibold">Welcome</span>
+              <button className="bg-red-500 text-white px-4 py-1.5 rounded-md">
+                Logout
+              </button>
+            </>
+          ) : (
+            <>
+              <Link href="/signin">
+                <button className="border border-green-800 px-4 py-1.5 rounded-md font-semibold">
+                  Sign In
+                </button>
+              </Link>
+
+              <Link href="/signup">
+                <button className="bg-green-800 text-white px-4 py-1.5 rounded-md font-semibold">
+                  Sign Up
+                </button>
+              </Link>
+            </>
+          )}
         </div>
       </div>
     </div>
