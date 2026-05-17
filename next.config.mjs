@@ -9,6 +9,12 @@ const nextConfig = {
         hostname: "www.wisbar.org",
         hostname: "ibb.co.com",
       },
+
+      {
+        protocol: "https",
+        hostname: "i.ibb.co",
+        port: "",
+      },
     ],
   },
 };

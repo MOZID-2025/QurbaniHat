@@ -13,6 +13,8 @@ const Navbar = () => {
 
   const user = session?.user;
 
+  console.log(user);
+
   const handleLogout = async () => {
     await authClient.signOut();
   };
@@ -56,7 +58,7 @@ const Navbar = () => {
               {/* Profile Image */}
               <div className="relative w-12 h-12">
                 <Image
-                  src={user.image || "/default-user.png"}
+                  src={user?.image}
                   alt={user.name || "User"}
                   fill
                   className="rounded-full object-cover border-2 border-green-800"
