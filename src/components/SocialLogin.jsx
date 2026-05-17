@@ -7,7 +7,6 @@ import { useRouter } from "next/navigation";
 
 const SocialLogin = () => {
   const router = useRouter();
-
   const handleGoogleLogin = async () => {
     const { error } = await authClient.signIn.social({
       provider: "google",
